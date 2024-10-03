@@ -1,5 +1,9 @@
- export default function PackingList (){
+import Item from "./Item"
+
+ export default function PackingList ({items}){
     return(
-      <div className="list">LIST</div>
+      <div className="list">
+      <ul>{items.map((item)=>(<Item item={item} key={item.id}/>))}</ul>
+      </div>
     )
   }
